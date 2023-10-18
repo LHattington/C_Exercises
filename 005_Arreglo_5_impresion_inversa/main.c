@@ -3,13 +3,16 @@
 
 int main()
 {
+    // En C, los arreglos se indexan a partir de la posición cero (0).
+    // Es decir, array[] tiene los espacios array[0], array[1], array[2], array[3] y array[4]
     int array[5];
-    int num;
     
-    for(num=0,num<=4,num++)
+    printf("Escribe 5 numeros\n");
+    
+    for(int pos=0; pos<=4; pos++)
     {
-        printf("Escribe 5 numeros: %d",i);
-        scanf("%d", &array[5]);
+        printf("Escribe el numero %d: ", i+1);
+        scanf("%d", &array[pos]);
     }
    
     return 0;

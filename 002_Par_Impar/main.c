@@ -1,3 +1,4 @@
+/* Pide un numero y te dice si ese numero es par o impar */
 #include <stdio.h>
 
 int main()

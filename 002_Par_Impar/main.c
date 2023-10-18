@@ -3,15 +3,16 @@
 
 int main()
 {
-    int numero = 0;
-    printf("Ingresa un número:  ");
+    int numero = 0; // Se ingresa un numero
+    printf("Ingresa un numero:  ");
     scanf("%i",&numero);
     
-    if (numero % 2 == 0){
-        printf("El número %i es par", numero);
+    if (numero % 2 == 0) // Si el numero es divisible entre 2 el numero es par 
+    {
+        printf("El numero %i es par", numero);
     }
-    else {
-        printf("El número %i es impar", numero);
+    else {               // Si el numero no es divisible entre 2 el numero es impar 
+        printf("El numero %i es impar", numero);
     }
 
     return 0;

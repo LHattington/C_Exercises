@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 int main()
-{
+{                       // El usuario ingresa 2 numeros 
     int numA = 0;
     printf("Ingresa un numero:  ");
     scanf("%i",&numA);
@@ -10,8 +10,7 @@ int main()
     printf("Ingresa otro numero:  ");
     scanf("%i",&numB);
     
-    
-    if (numA % numB == 0){
+    if (numA % numB == 0){   // Determina si A es divisible o no entre B
         printf("El numero %i es divisible entre %i", numA, numB);
     }
     else {

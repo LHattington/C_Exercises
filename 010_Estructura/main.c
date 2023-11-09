@@ -1,6 +1,5 @@
-/* Asks names, last names, age, year of studies, grades for four subjects
-and a s unique numeric code for n ss (up to 10) in a group. 
-Then ask for a s number and print its saved values as well as an average of the four grades. */
+/* Asks names, last names, age, year of studies, grades for four subjects and a s unique numeric code for n students (up to 10) in a group. 
+    Then ask for a student number and print its saved values as well as an average of the four grades. */
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
@@ -37,7 +36,7 @@ int main()
     s3.yearsOfStudy = 20;
     s3.grades[4] = 10, 10, 9.5, 9.5;
     s3.numericCode = 012212;
-    
+
     strcpy(s4.name, "Daniela");                           // Student 4 info
     strcpy(s4.lastName, "Bravo");
     s4.age = 25;
@@ -45,14 +44,14 @@ int main()
     s4.grades[4] = 9, 10, 9.5, 9.5;
     s4.numericCode = 012213;
 
-    strcpy(s5.name, "Pablo");                              // Student 5 info
+    strcpy(s5.name, "Pablo");                                // Student 5 info
     strcpy(s5.lastName, "Morales");
     s5.age = 23;
     s5.yearsOfStudy = 20;
     s5.grades[4] = 10, 9.4, 9, 9.5;
     s5.numericCode = 012214;
 
-    strcpy(s6.name, "Ruben");                              // Student 6 info
+    strcpy(s6.name, "Ruben");                               // Student 6 info
     strcpy(s6.lastName, "Rendon");
     s6.age = 23;
     s6.yearsOfStudy = 20;

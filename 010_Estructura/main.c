@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 int num = 0;
+float average = 0;
 
 struct Students{                                                   // Structure with the students information
     char name[20];
@@ -92,7 +93,19 @@ int main()
     {
         printf("Enter the student number: ");
         scanf("%i", &num);
-        printf(s[num]);
+        printf("Name: %s\n", s[num].name);
+        printf("Lastname: %s\n", s[num].lastName);
+        printf("Age: %i\n", s[num].age);
+        printf("Years of Study: %i\n", s[num].yearsOfStudy);
+        for(int counter2 = 0; counter2 < 4; counter2 ++)
+        {
+            sumGrades = s[num].grades[counter2] + sumGrades;
+            // average = sumGrades + average;
+        }
+        average = sumGrades / 4;
+        printf("Numeric Code: %i\n", s[num].numericCode);        
+        printf("Grades: %f\n", s[num].grades);
+        printf("Average: %f\n", average);
     }
 
     return 0; 

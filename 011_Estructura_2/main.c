@@ -5,13 +5,16 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+#define NAME_LENGTH 20
+#define LASTNAME_LENGTH 30
+
 int num = 0;
 float sumGrades = 0;
 float average = 0;
 
 struct Students{                                                   // Structure with the students information
     char name[20];
-    char lastName[20];
+    char lastName[30];
     unsigned int age;
     unsigned int yearsOfStudy;
     float grades[4];
@@ -23,22 +26,22 @@ int main()
     for(int counter = 0;counter < 10; counter ++)
     {
         printf("Name: ");
-        scanf("%s", &s[counter].name);
+        fgets(s[counter].name, NAME_LENGTH, stdin);
         printf("Lastname: ");
-        scanf("%s", &s[counter].lastName);
+        fgets(s[counter].lastName, LASTNAME_LENGTH, stdin);
         printf("Age: ");
         scanf("%i", &s[counter].age);
         printf("Years of Study: ");
         scanf("%i", &s[counter].yearsOfStudy);
         for(int counter3 = 0; counter3 < 4; counter3 ++)
         {
-            printf("Grade: ");
-            scanf("%d:%f", counter3 + 1, &s[counter].grades[counter3]);
+            printf("Grade %d: ",(counter3 + 1));
+            scanf("%f", &s[counter].grades[counter3]);
         }
         printf("Numeric Code: ");
         scanf("%i", &s[counter].numericCode);
     }
-    while ()
+    while(1)
     {
         printf("Enter the student number: ");
         scanf("%i", &num);
@@ -57,6 +60,6 @@ int main()
         printf("Numeric Code: %i\n", s[num].numericCode);        
         printf("Average: %f\n", average);
     }
-    
+
     return 0; 
 }

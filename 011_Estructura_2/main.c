@@ -120,7 +120,7 @@ int main()
     s[9].grades[3] = 9.5;
     s[9].numericCode = 1010;
 
-    while()
+    while ()
     {
         printf("Enter the student number: ");
         scanf("%i", &num);

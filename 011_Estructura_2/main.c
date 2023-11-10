@@ -23,20 +23,20 @@ int main()
     for(int counter = 0;counter < 10; counter ++)
     {
         printf("Name: ");
-        scanf("%s\n", &s[counter].name);
+        scanf("%s", &s[counter].name);
         printf("Lastname: ");
-        scanf("%s\n", &s[counter].lastName);
+        scanf("%s", &s[counter].lastName);
         printf("Age: ");
-        scanf("%i\n", &s[counter].age);
+        scanf("%i", &s[counter].age);
         printf("Years of Study: ");
-        scanf("%i\n", &s[counter].yearsOfStudy);
+        scanf("%i", &s[counter].yearsOfStudy);
         for(int counter3 = 0; counter3 < 4; counter3 ++)
         {
             printf("Grade: ");
-            scanf("%d:%f\n", counter3 + 1, &s[counter].grade[counter3]);
+            scanf("%d:%f", counter3 + 1, &s[counter].grades[counter3]);
         }
         printf("Numeric Code: ");
-        scanf("%i\n", &s[counter].numericCode);
+        scanf("%i", &s[counter].numericCode);
     }
     while ()
     {
@@ -57,6 +57,6 @@ int main()
         printf("Numeric Code: %i\n", s[num].numericCode);        
         printf("Average: %f\n", average);
     }
-
+    
     return 0; 
 }

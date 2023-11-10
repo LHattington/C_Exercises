@@ -1,17 +1,17 @@
-/* Asks names, last names, age, year of studies, grades for four subjects and a s unique numeric code for n students (up to 10) in a group. 
+/* Asks names, last names, age, year of studies, grades for four subjects and a s unique numeric code for n students (up to 10) in a group.
     Then ask for a student number and print its saved values as well as an average of the four grades. */
 #include <stdio.h>
 #include <string.h>
 #include <stdint.h>
 #include <stdlib.h>
-
+ 
 #define NAME_LENGTH 20
 #define LASTNAME_LENGTH 30
-
+ 
 int num = 0;
 float sumGrades = 0;
 float average = 0;
-
+ 
 struct Students{                                                   // Structure with the students information
     char name[20];
     char lastName[30];
@@ -19,12 +19,14 @@ struct Students{                                                   // Structure 
     unsigned int yearsOfStudy;
     float grades[4];
     unsigned int numericCode;
-}s[10];                    // Number of students
-
+}s[3];                                                                     // Number of students
+ 
 int main()
 {
-    for(int counter = 0;counter < 10; counter ++)
+    for(int counter = 0;counter < 3; counter ++)
     {
+        fflush(stdin);
+        printf("Student %i\n", (counter + 1));
         printf("Name: ");
         fgets(s[counter].name, NAME_LENGTH, stdin);
         printf("Lastname: ");
@@ -40,26 +42,29 @@ int main()
         }
         printf("Numeric Code: ");
         scanf("%i", &s[counter].numericCode);
+        printf("\n");
     }
     while(1)
     {
         printf("Enter the student number: ");
         scanf("%i", &num);
-        printf("Name: %s\n", s[num].name);
-        printf("Lastname: %s\n", s[num].lastName);
-        printf("Age: %i\n", s[num].age);
-        printf("Years of Study: %i\n", s[num].yearsOfStudy);
+        printf("Student %i\n", num);
+        printf("Name: %s", s[num-1].name);
+        printf("Lastname: %s", s[num-1].lastName);
+        printf("Age: %i\n", s[num-1].age);
+        printf("Years of Study: %i\n", s[num-1].yearsOfStudy);
         sumGrades = 0;
         for(int counter2 = 0; counter2 < 4; counter2 ++)
         {
-             printf("Grade %d: %f\n", counter2 + 1, s[num].grades[counter2]);
-             sumGrades = s[num].grades[counter2] + sumGrades;
+             printf("Grade %d: %f\n", counter2 + 1, s[num-1].grades[counter2]);
+             sumGrades = s[num-1].grades[counter2] + sumGrades;
             // average = sumGrades + average;
         }
         average = sumGrades / 4;
-        printf("Numeric Code: %i\n", s[num].numericCode);        
+        printf("Numeric Code: %i\n", s[num-1].numericCode);
         printf("Average: %f\n", average);
+        printf("\n");
     }
-
-    return 0; 
+ 
+    return 0;
 }

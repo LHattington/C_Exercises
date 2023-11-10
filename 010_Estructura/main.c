@@ -5,6 +5,8 @@
 #include <stdint.h>
 #include <stdlib.h>
 
+int num = 0;
+
 struct Students{                                                   // Structure with the students information
     char name[20];
     char lastName[20];
@@ -12,85 +14,86 @@ struct Students{                                                   // Structure 
     unsigned int yearsOfStudy;
     float grades[4];
     unsigned int numericCode;
-}s1, s2, s3, s4, s5, s6, s7, s8 ,s9, s10;                    // Number of students
+}s[10];                    // Number of students
 
 int main()
 {
-    strcpy(s1.name, "Rafael");                                 // Student 1 info
-    strcpy(s1.lastName, "Hernandez");
-    s1.age = 22;
-    s1.yearsOfStudy = 18;
-    s1.grades[4] = 10, 10, 10, 9.5;
-    s1.numericCode = 01;
+    strcpy(s[0].name, "Rafael");                                 // Student 1 info
+    strcpy(s[0].lastName, "Hernandez");
+    s[0].age = 22;
+    s[0].yearsOfStudy = 18;
+    s[0].grades[4] = 10, 10, 10, 9.5;
+    s[0].numericCode = 0xd01;
 
-    strcpy(s2.name, "Aldo");                                    // Student 2 info
-    strcpy(s2.lastName, "Luna");
-    s2.age = 22;
-    s2.yearsOfStudy = 19;
-    s2.grades[4] = 10, 10, 10, 10;
-    s2.numericCode = 02;
+    strcpy(s[1].name, "Aldo");                                    // Student 2 info
+    strcpy(s[1].lastName, "Luna");
+    s[1].age = 22;
+    s[1].yearsOfStudy = 19;
+    s[1].grades[4] = 10, 10, 10, 10;
+    s[1].numericCode = 0xd02;
 
-    strcpy(s3.name, "Moana");                                   // Student 3 info
-    strcpy(s3.lastName, "De Motonui");
-    s3.age = 24;
-    s3.yearsOfStudy = 20;
-    s3.grades[4] = 10, 10, 9.5, 9.5;
-    s3.numericCode = 03;
+    strcpy(s[2].name, "Moana");                                   // Student 3 info
+    strcpy(s[2].lastName, "De Motonui");
+    s[2].age = 24;
+    s[2].yearsOfStudy = 20;
+    s[2].grades[4] = 10, 10, 9.5, 9.5;
+    s[2].numericCode = 0xd03;
 
-    strcpy(s4.name, "Pippin");                               // Student 4 info
-    strcpy(s4.lastName, "Took");
-    s4.age = 24;
-    s4.yearsOfStudy = 20;
-    s4.grades[4] = 9, 10, 9.5, 9.5;
-    s4.numericCode = 04;
+    strcpy(s[3].name, "Pippin");                               // Student 4 info
+    strcpy(s[3].lastName, "Took");
+    s[3].age = 24;
+    s[3].yearsOfStudy = 20;
+    s[3].grades[4] = 9, 10, 9.5, 9.5;
+    s[3].numericCode = 0xd04;
 
-    strcpy(s5.name, "Pablo");                                   // Student 5 info
-    strcpy(s5.lastName, "Morales");
-    s5.age = 23;
-    s5.yearsOfStudy = 20;
-    s5.grades[4] = 10, 9.4, 9, 9.5;
-    s5.numericCode = 05;
+    strcpy(s[4].name, "Pablo");                                   // Student 5 info
+    strcpy(s[4].lastName, "Morales");
+    s[4].age = 23;
+    s[4].yearsOfStudy = 20;
+    s[4].grades[4] = 10, 9.4, 9, 9.5;
+    s[4].numericCode = 0xd05;
 
-    strcpy(s6.name, "Sam");                                 // Student 6 info
-    strcpy(s6.lastName, "Wise");
-    s6.age = 23;
-    s6.yearsOfStudy = 20;
-    s6.grades[4] = 9, 9.4, 9.2, 9.5;
-    s6.numericCode = 06;
+    strcpy(s[5].name, "Sam");                                 // Student 6 info
+    strcpy(s[5].lastName, "Wise");
+    s[5].age = 23;
+    s[5].yearsOfStudy = 20;
+    s[5].grades[4] = 9, 9.4, 9.2, 9.5;
+    s[5].numericCode = 0xd06;
 
-    strcpy(s7.name, "Sherlock");                             // Student 7 info
-    strcpy(s7.lastName, "Holmes");
-    s7.age = 23;
-    s7.yearsOfStudy = 23;
-    s7.grades[4] = 10, 10, 10, 10;
-    s7.numericCode = 07;
+    strcpy(s[6].name, "Sherlock");                             // Student 7 info
+    strcpy(s[6].lastName, "Holmes");
+    s[6].age = 23;
+    s[6].yearsOfStudy = 23;
+    s[6].grades[4] = 10, 10, 10, 10;
+    s[6].numericCode = 0xd07;
 
-    strcpy(s8.name, "Bilbo");                                   // Student 8 info
-    strcpy(s8.lastName, "Baggins");
-    s8.age = 23;
-    s8.yearsOfStudy = 20;
-    s8.grades[4] = 8,5, 8.7, 9.2, 9.4;
-    s8.numericCode = 08;
+    strcpy(s[7].name, "Bilbo");                                   // Student 8 info
+    strcpy(s[7].lastName, "Baggins");
+    s[7].age = 23;
+    s[7].yearsOfStudy = 20;
+    s[7].grades[4] = 8,5, 8.7, 9.2, 9.4;
+    s[7].numericCode = 0xd08;
 
-    strcpy(s9.name, "Artu");                                 // Student 9 info
-    strcpy(s9.lastName, "Rito");
-    s9.age = 24;
-    s9.yearsOfStudy = 20;
-    s9.grades[4] = 9.3, 9, 8.7, 8.5;
-    s9.numericCode = 09;
+    strcpy(s[8].name, "Artu");                                 // Student 9 info
+    strcpy(s[8].lastName, "Rito");
+    s[8].age = 24;
+    s[8].yearsOfStudy = 20;
+    s[8].grades[4] = 9.3, 9, 8.7, 8.5;
+    s[8].numericCode = 0xd09;
 
-    strcpy(s10.name, "Winnie");                        // Student 10 info
-    strcpy(s10.lastName, "Pooh");
-    s10.age = 24;
-    s10.yearsOfStudy = 20;
-    s10.grades[4] = 9.7, 9.4, 9.6, 9.5;
-    s10.numericCode =10;
+    strcpy(s[9].name, "Winnie");                        // Student 10 info
+    strcpy(s[9].lastName, "Pooh");
+    s[9].age = 24;
+    s[9].yearsOfStudy = 20;
+    s[9].grades[4] = 9.7, 9.4, 9.6, 9.5;
+    s[9].numericCode =0xd10;
 
-    int num = 0;
-    printf("Enter the student number: ");
-    scanf("%i", &num);
-
-    
+    for (int counter = 0; counter < 10; counter ++)
+    {
+        printf("Enter the student number: ");
+        scanf("%i", &num);
+        printf(s[num]);
+    }
 
     return 0; 
 }

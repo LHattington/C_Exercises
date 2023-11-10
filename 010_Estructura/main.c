@@ -6,6 +6,7 @@
 #include <stdlib.h>
 
 int num = 0;
+float sumGrades = 0;
 float average = 0;
 
 struct Students{                                                   // Structure with the students information
@@ -23,71 +24,101 @@ int main()
     strcpy(s[0].lastName, "Hernandez");
     s[0].age = 22;
     s[0].yearsOfStudy = 18;
-    s[0].grades[4] = 10, 10, 10, 9.5;
-    s[0].numericCode = 0xd01;
+    s[0].grades[0] = 10;
+    s[0].grades[1] = 10;
+    s[0].grades[2] = 10;
+    s[0].grades[3] = 9.5;
+    s[0].numericCode = 1001;
 
     strcpy(s[1].name, "Aldo");                                    // Student 2 info
     strcpy(s[1].lastName, "Luna");
     s[1].age = 22;
     s[1].yearsOfStudy = 19;
-    s[1].grades[4] = 10, 10, 10, 10;
-    s[1].numericCode = 0xd02;
+    s[1].grades[0] = 10;
+    s[1].grades[1] = 10;
+    s[1].grades[2] = 10;
+    s[1].grades[3] = 10;
+    s[1].numericCode = 1002;
 
     strcpy(s[2].name, "Moana");                                   // Student 3 info
     strcpy(s[2].lastName, "De Motonui");
     s[2].age = 24;
     s[2].yearsOfStudy = 20;
-    s[2].grades[4] = 10, 10, 9.5, 9.5;
-    s[2].numericCode = 0xd03;
+    s[2].grades[0] = 10;
+    s[2].grades[1] = 10;
+    s[2].grades[2] = 9.5;
+    s[2].grades[3] = 9.5;
+    s[2].numericCode = 1003;
 
     strcpy(s[3].name, "Pippin");                               // Student 4 info
     strcpy(s[3].lastName, "Took");
     s[3].age = 24;
     s[3].yearsOfStudy = 20;
-    s[3].grades[4] = 9, 10, 9.5, 9.5;
-    s[3].numericCode = 0xd04;
+    s[3].grades[0] = 9;
+    s[3].grades[1] = 10;
+    s[3].grades[2] = 9.5;
+    s[3].grades[3] = 9.5;
+    s[3].numericCode = 1004;
 
     strcpy(s[4].name, "Pablo");                                   // Student 5 info
     strcpy(s[4].lastName, "Morales");
     s[4].age = 23;
     s[4].yearsOfStudy = 20;
-    s[4].grades[4] = 10, 9.4, 9, 9.5;
-    s[4].numericCode = 0xd05;
+    s[4].grades[0] = 10;
+    s[4].grades[1] = 9.4;
+    s[4].grades[2] = 9;
+    s[4].grades[3] = 9.5;
+    s[4].numericCode = 1005;
 
     strcpy(s[5].name, "Sam");                                 // Student 6 info
     strcpy(s[5].lastName, "Wise");
     s[5].age = 23;
     s[5].yearsOfStudy = 20;
-    s[5].grades[4] = 9, 9.4, 9.2, 9.5;
-    s[5].numericCode = 0xd06;
+    s[5].grades[0] = 9;
+    s[5].grades[1] = 9.4;
+    s[5].grades[2] = 9.2;
+    s[5].grades[3] = 9.5;
+    s[5].numericCode = 1006;
 
     strcpy(s[6].name, "Sherlock");                             // Student 7 info
     strcpy(s[6].lastName, "Holmes");
     s[6].age = 23;
     s[6].yearsOfStudy = 23;
-    s[6].grades[4] = 10, 10, 10, 10;
-    s[6].numericCode = 0xd07;
+    s[6].grades[0] = 10;
+    s[6].grades[1] = 10;
+    s[6].grades[2] = 10;
+    s[6].grades[3] = 10;
+    s[6].numericCode = 1007;
 
     strcpy(s[7].name, "Bilbo");                                   // Student 8 info
     strcpy(s[7].lastName, "Baggins");
     s[7].age = 23;
     s[7].yearsOfStudy = 20;
-    s[7].grades[4] = 8,5, 8.7, 9.2, 9.4;
-    s[7].numericCode = 0xd08;
+    s[7].grades[0] = 8.5;
+    s[7].grades[1] = 8.7;
+    s[7].grades[2] = 9.2;
+    s[7].grades[3] = 9.4;
+    s[7].numericCode = 1008;
 
     strcpy(s[8].name, "Artu");                                 // Student 9 info
     strcpy(s[8].lastName, "Rito");
     s[8].age = 24;
     s[8].yearsOfStudy = 20;
-    s[8].grades[4] = 9.3, 9, 8.7, 8.5;
-    s[8].numericCode = 0xd09;
+    s[8].grades[0] = 9.3;
+    s[8].grades[1] = 9;
+    s[8].grades[2] = 8.7;
+    s[8].grades[3] = 8.5;
+    s[8].numericCode = 1009;
 
     strcpy(s[9].name, "Winnie");                        // Student 10 info
     strcpy(s[9].lastName, "Pooh");
     s[9].age = 24;
     s[9].yearsOfStudy = 20;
-    s[9].grades[4] = 9.7, 9.4, 9.6, 9.5;
-    s[9].numericCode =0xd10;
+    s[9].grades[0] = 9.7;
+    s[9].grades[1] = 9.4;
+    s[9].grades[2] = 9.6;
+    s[9].grades[3] = 9.5;
+    s[9].numericCode = 1010;
 
     for (int counter = 0; counter < 10; counter ++)
     {
@@ -97,14 +128,15 @@ int main()
         printf("Lastname: %s\n", s[num].lastName);
         printf("Age: %i\n", s[num].age);
         printf("Years of Study: %i\n", s[num].yearsOfStudy);
+        sumGrades = 0;
         for(int counter2 = 0; counter2 < 4; counter2 ++)
         {
-            sumGrades = s[num].grades[counter2] + sumGrades;
+             printf("Grade %d: %f\n", counter2 + 1, s[num].grades[counter2]);
+             sumGrades = s[num].grades[counter2] + sumGrades;
             // average = sumGrades + average;
         }
         average = sumGrades / 4;
         printf("Numeric Code: %i\n", s[num].numericCode);        
-        printf("Grades: %f\n", s[num].grades);
         printf("Average: %f\n", average);
     }
 

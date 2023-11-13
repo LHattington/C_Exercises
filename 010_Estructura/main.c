@@ -5,7 +5,7 @@
 #include <stdint.h>
 #include <stdlib.h>
 
-int num = 0;
+int num = 0;                                                            // Declare variables
 float sumGrades = 0;
 float average = 0;
 
@@ -16,11 +16,11 @@ struct Students{                                                   // Structure 
     unsigned int yearsOfStudy;
     float grades[4];
     unsigned int numericCode;
-}s[10];                    // Number of students
+}s[10];                                                                    // Number of students
 
 int main()
 {
-    strcpy(s[0].name, "Rafael");                                 // Student 1 info
+    strcpy(s[0].name, "Rafael");                              // Student 1 info
     strcpy(s[0].lastName, "Hernandez");
     s[0].age = 22;
     s[0].yearsOfStudy = 18;
@@ -122,22 +122,22 @@ int main()
 
     while()
     {
-        printf("Enter the student number: ");
-        scanf("%i", &num);
-        printf("Name: %s\n", s[num].name);
-        printf("Lastname: %s\n", s[num].lastName);
-        printf("Age: %i\n", s[num].age);
-        printf("Years of Study: %i\n", s[num].yearsOfStudy);
-        sumGrades = 0;
-        for(int counter2 = 0; counter2 < 4; counter2 ++)
+        printf("Enter the student number: ");                                                           
+        scanf("%i", &num);                                                                                       // Enter the student number
+        printf("Name: %s\n", s[num].name);                                                            // Print the name saved in the structure in the previously entered position 
+        printf("Lastname: %s\n", s[num].lastName);                                               // Print the lastname saved in the structure in the previously entered position
+        printf("Age: %i\n", s[num].age);                                                                  // Print the age saved in the structure in the previously entered position
+        printf("Years of Study: %i\n", s[num].yearsOfStudy);                               // Print the years of study saved in the structure in the previously entered position
+        sumGrades = 0;                                                                                           // Initialize the variable "sumGrades"
+        for(int counter2 = 0; counter2 < 4; counter2 ++)                                        // Initialize the counter 2
         {
-             printf("Grade %d: %f\n", counter2 + 1, s[num].grades[counter2]);
-             sumGrades = s[num].grades[counter2] + sumGrades;
-            // average = sumGrades + average;
+             printf("Grade %d: %f\n", counter2 + 1, s[num].grades[counter2]);       // Print the grade saved in the array "grades" in the previusly entered position
+             sumGrades = s[num].grades[counter2] + sumGrades;                            // Calculate the sum of the array "grades" and "sumGrades"
+            // average = sumGrades + average;                                                            and save a new value in the variable "sumGrades"
         }
-        average = sumGrades / 4;
-        printf("Numeric Code: %i\n", s[num].numericCode);        
-        printf("Average: %f\n", average);
+        average = sumGrades / 4;                                                                         // Calculate the average of the grades
+        printf("Numeric Code: %i\n", s[num].numericCode);                                 // Print the numeric code saved in the structure in the previously entered position
+        printf("Average: %f\n", average);                                                            // Print the average previously calculated
     }
 
     return 0; 

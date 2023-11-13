@@ -49,19 +49,19 @@ int main()
         printf("Enter the student number: ");
         scanf("%i", &num);                                                              // Enter a student number and all the info of that student will be printed 
         printf("Student %i\n", num);
-        printf("Name: %s", s[num-1].name);
-        printf("Lastname: %s", s[num-1].lastName);
-        printf("Age: %i\n", s[num-1].age);
-        printf("Years of Study: %i\n", s[num-1].yearsOfStudy);
+        printf("Name: %s", s[num-1].name);                                    // Print the name saved in the structure in the previously entered position
+        printf("Lastname: %s", s[num-1].lastName);                       // Print the lastname saved in the structure in the previously entered position
+        printf("Age: %i\n", s[num-1].age);                                      // Print the age saved in the structure in the previously entered position
+        printf("Years of Study: %i\n", s[num-1].yearsOfStudy);   // Print the years of study saved in the structure in the previously entered position
         sumGrades = 0;                                                                  // Initialize "sumGrades" variable
         for(int counter2 = 0; counter2 < 4; counter2 ++)                // Initialize counter2
         {
              printf("Grade %d: %f\n", counter2 + 1, s[num-1].grades[counter2]);    // Print the grade saved in the array "grades" in the previusly entered position
              sumGrades = s[num-1].grades[counter2] + sumGrades;                         // Calculate the sum of the array "grades" and "sumGrades"
         }                                                                                                                // and save a new value in the variable "sumGrades"
-        average = sumGrades / 4;
-        printf("Numeric Code: %i\n", s[num-1].numericCode);
-        printf("Average: %f\n", average);
+        average = sumGrades / 4;                                                   // Calulate the average of the grades
+        printf("Numeric Code: %i\n", s[num-1].numericCode);        // Print the numeric code saved in the structure in the previously entered position
+        printf("Average: %f\n", average);                                      // Print the average of the student's grades
         printf("\n");
     }
  

@@ -55,6 +55,7 @@ int main()
         scanf("%i", &num);                                                              // Enter a student number and all the info of that student will be printed
         printf("Student %i\n", num);
         printf("Memory address is: 0x%p\n", (void *)&student[num-1]);
+        printf(sizeof((void *)&student[num -1]));
         printf("Name: %student", student[num-1].name);                                    // Print the name saved in the structure in the previously entered position
         printf("Lastname: %student", student[num-1].lastName);                       // Print the lastname saved in the structure in the previously entered position
         printf("Age: %i\n", student[num-1].age);                                      // Print the age saved in the structure in the previously entered position

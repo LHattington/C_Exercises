@@ -4,22 +4,24 @@
 #include <stdio.h>
 #include <string.h>
 
+#define LENGTH_OF_ARRAY 3                                                     // Define constants
+
 int main()
 {
-    int array[3];
-    int  * pointer_to_array;
+    int array[LENGTH_OF_ARRAY];                                                // Declare an array
+    int  * pointer_to_array;                                                              // Declare a pointer
     
-    printf("Escribe 5 numeros\n");
+    printf("Enter %d number(s)\n", LENGTH_OF_ARRAY);            // Print how many numbers has the array
 
-    for(int pos=0; pos<=2; pos++)
+    for(int pos=0; pos<=2; pos++)                                                      // Counter to save the numbers in the correct position of the array
     {
-        printf("Escribe el numero %d: ", pos+1); 
-        scanf("%d", (array + pos));
-    // printf("El numero %d es: %d\n", pos+1 ,*(array + pos) );
+        printf("Enter the number %d: ", pos+1);
+        scanf("%d", (array + pos));                                                     // Enter the number and save it in the position of the counter of the array
+    // printf("The number %d is: %d\n", pos+1 ,*(array + pos) );
     } 
-    for(int pos=2; pos>=0; pos--)
+    for(int pos=2; pos>=0; pos--)                                                       // Counter to put the numbers in the correct position
     {
-        printf("El numero %d es: %d\n", pos+1 ,*(array + pos) );
+        printf("The number %d is: %d\n", pos+1 ,*(array + pos) );       // Print the correct possition of the numbers of the array
     } 
 
     return 0;
